@@ -11,9 +11,9 @@
     color: #000;
     border-radius: 5%;
     border-top: 5px solid rgb(103, 138, 170);
-    height: 320px;
+    height: 300px;
+    width: 300px;
     max-width: 100%;
-    width: 320px;
     margin: 60px 40px;
     -webkit-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
@@ -21,7 +21,7 @@
 }
 
 .sumary-block h2 {
-    font-weight: 350;
+    font-weight: 450;
 }
 
 .sumary-block:hover {
@@ -30,4 +30,19 @@
 }
 .sumary-block img {
     height: 150px;
+}
+
+@media (max-width: 500px) {
+    .sumary-block div {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sumary-block h2 {
+        font-size: 1.2em;
+    }
+
+    .sumary-block img {
+        height: 100px;
+    }
 }

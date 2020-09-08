@@ -3,7 +3,27 @@ import './GallerySection.css'
 
 import PreviousBtn from './PreviousBtn'
 
+import Images from '../../DATABASE_TEMP/Images'
+
 export default function GallerySection() {
+    const imagesArray = Images()
+
+    function renderImg() {
+        return imagesArray.map((art, index) => {
+            return (
+                <li key={index}>
+                    <a
+                        href={art.src}
+                        data-lightbox="mygallery"
+                        data-title={art.imageTitle}
+                    >
+                        <img src={art.src} alt={art.alt} />
+                    </a>
+                </li>
+            )
+        })
+    }
+
     return (
         <div className="gallery-section animationPopIn">
             <div className="section-text">
@@ -14,7 +34,9 @@ export default function GallerySection() {
                 </h6>
             </div>
 
-            <ul className="navigation"></ul>
+            <ul className="navigation">
+                {renderImg()}
+            </ul>
 
             <PreviousBtn to="/" />
 

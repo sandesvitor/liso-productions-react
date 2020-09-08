@@ -45,6 +45,10 @@ section .section-description {
     font-weight: 250;
 }
 
+section a {
+    text-decoration: none;
+}
+
 @media (max-width: 450px) {
     .section-title {
         font-size: 0.8em;

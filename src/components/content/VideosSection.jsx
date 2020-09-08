@@ -4,33 +4,43 @@ import './VideosSection.css'
 import axios from 'axios'
 import videosJSON from '../../DATABASE_TEMP/videosInfo.json'
 
-import previousBtn from '../../assets/misc/prev.png'
 import PreviousBtn from './PreviousBtn'
+import Thumbnails from '../../DATABASE_TEMP/Thumbnails'
 
-const baseUrl = '../../DATABASE_TEMP/videosInfo.json'
+
 
 export default function VideoSection(props) {
+    const thumbnailsArray = Thumbnails()
 
     useEffect(() => {
-        const ul = document.querySelector('.video-section.animationPopIn .navigation')
+        console.debug("Adding event listener 'click' to thumbnails")
 
-        console.log(videosJSON)
-        videosJSON.forEach(video => {
-
-            let li = document.createElement('li')
-            let img = document.createElement('img')
-            img.src = video.thumbnail
-
-            li.appendChild(img)
-            ul.appendChild(li)
-
-            li.onclick = src => {
-                document.querySelector('#slider').src = video.src
-            }
-
+        const iframe = document.querySelector('#slider')
+        const thumbs = document.querySelectorAll('.navigation li img')
+        thumbs.forEach(thumb => {
+            thumb.addEventListener("click", () => {
+                iframe.src = thumb.getAttribute("linkVimeo")
+            })
         })
 
+        return () => {
+            thumbs.forEach(thumb => {
+                thumb.removeEventListener("click", () => {
+
+                })
+            })
+        }
     }, [])
+
+    function renderThumbnails() {
+        return thumbnailsArray.map((thumbnail, index) => {
+            return (
+                <li key={index}>
+                    <img src={thumbnail.src} linkVimeo={videosJSON[index].src} />
+                </li>
+            )
+        })
+    }
 
     return (
         <div className="video-section animationPopIn">
@@ -48,13 +58,12 @@ export default function VideoSection(props) {
                 width="640" height="auto"
                 frameBorder="0"
                 allow="autoplay; fullscreen"
-                allowFullScreen>
-                {/* Aqui vai entrar o vídeo atual! */}
-                src={videosJSON[0].src}
+                allowFullScreen
+                src={videosJSON[0].src}>
             </iframe>
 
             <ul className="navigation">
-                {/* Aqui vão entrar os thumbnails! */}
+                {renderThumbnails()}
             </ul>
 
             <PreviousBtn to="/" />

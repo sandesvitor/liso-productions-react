@@ -1,0 +1,33 @@
+.gallery-section {
+    height: auto;
+    padding: 60px 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-section .navigation {
+    margin-top: 10px;
+    max-width: 100vw;
+    width: 100%;
+    list-style: none;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gallery-section .navigation img {
+    transition: 1s;
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-section .navigation img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}

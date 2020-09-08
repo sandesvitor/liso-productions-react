@@ -1,5 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { BrowserRouter } from 'react-router-dom'
 import "./App.css"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import Logos from '../data/logoImgs'
 
@@ -8,26 +11,32 @@ import Section from "../components/Section"
 import Footer from "../components/Footer"
 
 export default function App() {
+
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
+
   return (
-    <div className="app">
+    <BrowserRouter>
+      <div className="app">
 
-      <Header
-        title={"Helio Chrockatt"}
-        subTitle={"Liso Productions"}
-      />
+        <Header
+          title={"Helio Chrockatt"}
+          subTitle={"Liso Productions"}
+        />
 
-      <Section />
+        <Section />
 
-      <Footer
-        celphone={"+55 21 99999-9999"}
-        mail={"helio.csrn@gmail.com"}
-        instaLogo={Logos.instaSrc}
-        linkedinLogo={Logos.linkedinSrc}
-        vimeoLogo={Logos.vimeoSrc}
-        fadeDirection="fade-up"
-        fadeDuration={"1200"}
-      />
+        <Footer
+          celphone={"+55 21 99999-9999"}
+          mail={"helio.csrn@gmail.com"}
+          instaLogo={Logos.instaSrc}
+          linkedinLogo={Logos.linkedinSrc}
+          vimeoLogo={Logos.vimeoSrc}
+        />
 
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }

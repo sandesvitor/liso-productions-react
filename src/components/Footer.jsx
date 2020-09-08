@@ -4,9 +4,7 @@ import "./Footer.css"
 export default function Footer(props) {
   return (
     <footer>
-      <div className="footer-container"
-        data-aos={props.fadeDirection}
-        data-aos-duration={props.fadeDuration}>
+      <div className="footer-container">
 
         <div className="contact-info">
           <h2>Contato:</h2>

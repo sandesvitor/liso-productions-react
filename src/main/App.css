@@ -5,3 +5,18 @@
   display: flex;
   flex-direction: column;
 }
+
+.animationPopIn {
+  animation: popIn 1.5s;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

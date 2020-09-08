@@ -1,0 +1,10 @@
+.img-prev {
+    cursor: pointer;
+    width: 50px;
+    margin-top: 40px;
+}
+
+.img-prev:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}

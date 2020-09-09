@@ -1,7 +1,7 @@
-import React from "react"
+import React, { memo } from "react"
 import "./Footer.css"
 
-export default function Footer(props) {
+function Footer(props) {
   return (
     <footer>
       <div className="footer-container">
@@ -41,3 +41,5 @@ export default function Footer(props) {
     </footer>
   )
 }
+
+export default memo(Footer)

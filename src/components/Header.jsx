@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Header.css";
 
-export default function Header(props) {
+function Header(props) {
   return (
     <header>
       <div className="header">
@@ -13,3 +13,5 @@ export default function Header(props) {
     </header>
   );
 }
+
+export default memo(Header)

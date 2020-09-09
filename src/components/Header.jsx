@@ -1,6 +1,8 @@
 import React, { memo } from "react";
 import "./Header.css";
 
+import SmothScroller from './tools/SmothScroller'
+
 function Header(props) {
   return (
     <header>
@@ -9,6 +11,10 @@ function Header(props) {
           <h1>{props.title}</h1>
           <h4>{props.subTitle}</h4>
         </div>
+
+        <SmothScroller goToId={"footer"} scrollDuration={1500} />
+
+
       </div>
     </header>
   );

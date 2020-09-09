@@ -1,6 +1,6 @@
 header .header {
-    color: rgb(199, 194, 194);
-    background-image: url("../assets/headerBg.jpg");
+    color: rgb(94, 91, 91);
+    /* background-image: url("../assets/headerBg.jpg"); */
     height: 100vh;
     max-width: 100%;
     display: flex;

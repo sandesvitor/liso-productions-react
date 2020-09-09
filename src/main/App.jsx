@@ -21,10 +21,7 @@ export default function App() {
     <BrowserRouter>
       <div className="app">
 
-        <Header
-          title={"Helio Chrockatt"}
-          subTitle={"Liso Productions"}
-        />
+        <Header title={"Helio Chrockatt"} subTitle={"Liso Productions"} />
 
         <Section />
 
@@ -33,8 +30,7 @@ export default function App() {
           mail={"helio.csrn@gmail.com"}
           instaLogo={Logos.instaSrc}
           linkedinLogo={Logos.linkedinSrc}
-          vimeoLogo={Logos.vimeoSrc}
-        />
+          vimeoLogo={Logos.vimeoSrc} />
 
       </div>
     </BrowserRouter>

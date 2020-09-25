@@ -1,6 +1,6 @@
-.smoth-scroller-container img {
+.smoth-scroller-container i {
+    color: #fff;
     cursor: pointer;
-    height: 60%;
 
     /* HOVER OFF */
     transition: 1s;
@@ -8,7 +8,7 @@
     opacity: 0.5;
 }
 
-.smoth-scroller-container img:hover {
+.smoth-scroller-container i:hover {
     transition: 1s;
     transform: scale(1.15);
     opacity: 0.9;

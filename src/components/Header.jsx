@@ -14,7 +14,6 @@ function Header(props) {
 
         <SmothScroller goToId={"footer"} scrollDuration={1500} />
 
-
       </div>
     </header>
   );

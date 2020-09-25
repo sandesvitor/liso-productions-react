@@ -14,9 +14,7 @@ export default props =>
             duration={props.scrollDuration}>
 
 
-            <img
-                src={require('../../assets/misc/smothScroll.png')}
-                alt="Smoth Scroller icon" />
+            <i className="far fa-arrow-alt-circle-down fa-2x"></i>
 
         </SmothLink>
     </div>

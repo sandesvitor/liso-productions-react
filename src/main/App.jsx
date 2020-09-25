@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import "./App.css"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import '../../node_modules/fontawesome/generate'
 
 import Logos from '../data/logoImgs'
 
